@@ -24,11 +24,11 @@ public class Menu {
 
 	@SuppressWarnings("unchecked")
 	public static void main(String[] args) {
-		
+		//Creación del ArrayList
 		 ArrayList<Coche> listaCoches = new ArrayList<Coche>();
-		 //Scanner sc = new Scanner(System.in);
-		 
+		 //Creación archivo 
 		 File archivo = new File("coches.dat");
+		 //Comprobamos si existe
 		 if (archivo.exists()) {
 			 try {
 				    FileInputStream fichero = new FileInputStream("coches.dat");
@@ -50,7 +50,7 @@ public class Menu {
 				    e.printStackTrace();
 				}
 		 } else {
-		     System.out.println("El archivo "+archivo+" no existe");
+		     System.out.println("El archivo "+ archivo +" no existe");
 		 }
 		 
         try (Scanner sc = new Scanner(System.in)) {
